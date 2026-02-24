@@ -125,25 +125,35 @@
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
           
-            <img src="" alt="Image of your project" class="img-fluid">
+            <img src="images-inside-post-thebirthdayparadox-1.jpg" alt="A visualization of the Birthday Paradox" class="img-fluid">
           
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
-              <h3>Project Title</h3>
+              <h3>The Birthday Paradox</h3>
               <p>
-               Motivation of the project
+               Statistics show that it is over 50% likely that two people in the same room will share the same birthday given that the 
+               number of people is larger than 23. Our program creates a simulation which tracks stastically how probable it is for this paradox to occur on a sample size of n people
+               with 20 trials each. Outputs of probabilities for a sample size of n people is given in increments of 5, all the way to 100.
               </p>
               <p>
-              Functional requirements/what the project does
+              This project runs a high level simulation of the statistical likelihood of the Birthday Paradox appearing in sample sizes of 5, 10, 15, .. , 100 people that have randomly generated birthdays
+              over 20 trial runs. 
               </p>
               <p>
-              Project design
+              This program creates random lists of n people in increments of 5 all the way to 100. It then runs an expirement with 20 trials each on each of the sample sizes, calculating and outputting the resulting
+              statistical likelihood of the Birthday paradox occuring over 20 runs on a sample size of n.
               </p>
               <p>
-              Implementation
+              This project uses a high-level Simulator class which creates a random object that is passed to the expirement class, and prints out ending results. The expirement class takes in the number of people in a given expirement and the number of trials, as well
+              as the random object created in Simulator in it's constructor, and includes a method which returns a given expirements result, this method is used in a for-loop in the top-level Simulator class. The Trial class models a given trial in our expirement, it's constructor takes in the number of people in the trial
+              as well as the random object created in Simulator. Trial has a method which uses a nested for-loop to iterate through a list of random birthdays and checks if there is a duplicate. This method is utilized in the for-loop which obtains the expirement results in the Expirement class. Finally, the birthday class simply
+              takes in the random object that was created in Simulator in its constructor, and has another method which checks if a given month is in a certain month type (29 days, 30 days etc.), this method is used when creating random birthday objects in the constructor. Finally, the Birthday class overrides the inherited Object class's 
+              equals method, implementing it in a manner that simply checks if the values of the date and the month are the same. 
               </p>
-
+              <p>
+              This project helped me further understand the Single Responsibility Principle (SRP) as we were required to make our program modular so that debugging functionality would not be an issue. 
+              </p>
 
             </div>
 
