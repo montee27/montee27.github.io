@@ -155,6 +155,48 @@
               This project helped me further understand the Single Responsibility Principle (SRP) as we were required to make our program modular so that debugging functionality would not be an issue. 
               </p>
 
+              <div class="row">
+                <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+
+                  <img src="birthday_paradox.jpg">
+
+                </div>
+
+              <h3>Elevator Simulator</h3>
+
+              <p>
+                This project creates a simulation of multiple elevator types handling different calls in a building. There are 4 different types of Elevators and 2 different types of Schedulers. Each elevator has different behaviors as well as the schedulers.
+                Specifically, this project is best implemented through the use of Abstract classes and interfaces which allow us to group common functionality/attributes for a robust and abstracted design. This ensures that we follow the SRP as each of our classes is doing only one thing, and having only one reason to change.
+                It supports the open closed principle as our classes are programmed to abstractions (method taking in IElevator). Since we took time to properly design parent/subclass structure, substituting parent class objects for subclass objects wont break our program. For dependency inversion, we ensured that our high level scheduler relies on low level elevators.
+                Finally, our interfaces were created narrowly enough so that implementing classes did not have to implement necessary methods.
+
+              </p>
+              <p>
+                This project models a simulation of different types of elevators that respond to calls which are sent by a scheduler. In standard scheduling, the scheduler always begins assigning calls to the left-most elevator and iterate through accordingly. In complex scheduling, however, the scheduler assigns the call to the elevator that can complete it in the least amount of rounds. There are four different types of elevators:
+                1) The standard elevator which visits every floor and will not change direction to pick up a new call
+                2) The Freight elevator can visit every floor. This elevator only takes calls when empty, and won't service more than one person at a time, similar to the standard elevator, it will not change directions during a call.
+                3) The penthouse elevator can only travel between the top and bottom floor and can only change direction if it is empty.
+                4) Finally, the express elevator only services the top half of the building, only accept calls if its in the same direction as it is going, and change directions to answer a call only if the elevator is empty.
+              </p>
+              <p>
+                Above we have described how our design makes use of the SOLID principles. As for the four programming pillars, we
+                1) ensured that our design was abstracted through the use of proper parent and subclass relationship/structure
+                2) Since we did not users to be able to access/modify attributes of the Scheduler class, we made these attributes private/protected, supporting polymorphism
+                3) We utilized object  polymorphism as a specific elevator can be described as type Elevator (elevator Abstract class)
+                4) Through our use of inheritance we were properly able to abstract our design.
+              </p>
+              <p>
+                In this project, I was responsible for implementing the express and standard elevator, as well as the complex scheduler. While following Test-Driven Development (TDD) I faced certain issues with code coverage, specifically, I had issues with being able to properly mock the Call
+                class dependency with my current code structure. Refactoring the code such that my dependencies were properly mocked produced much cleaner code than what I had before, and is a facet of TDD that I enjoyed. Implementing the express and standard elevator was a great form of practicing
+                the SOLID programming principles. Specifically, refactoring the logic in my conditionals to be less wordy and call more helpers, as well as setting a few boolean values for readability, was a great way to practice producing code which is abstracted; so that any user can look at it and understand
+                the fundamental logic.
+              </p>
+              <p>
+                This project gave me great insight on how a real life elevator scheduling system would work, and taught me important skills regarding the continous development of software.
+                This was also my first experience with test-driven development, and my first opportunity to see first-hand how this process produces robust and clean code. This project also taught me that the design phase is just as important, if not more important, than the implementation phase. If we had not properly
+                laid out our class structure prior to implementation, we could have potentially produced code which violates the SOLID programming principles.
+              </p>
+
             </div>
 
             
